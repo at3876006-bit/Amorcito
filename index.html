@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> FLORES PARA MI NALGONA 🌹💕</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #fff9c4, #ffe082, #fff3b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fondo */
+.jardin {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Texto */
+.mensaje {
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #8a5a00;
+    text-shadow: 2px 2px 5px rgba(0,0,0,.15);
+    z-index: 20;
+}
+
+/* Rosa completa */
+.rosa {
+    position: absolute;
+    bottom: 15%;
+    width: 250px;
+    height: 600px;
+}
+
+/* Posiciones */
+.rosa1 {
+    left: 18%;
+    transform: rotate(-8deg);
+}
+
+.rosa2 {
+    left: 39%;
+    bottom: 12%;
+    transform: scale(1.15);
+    z-index: 5;
+}
+
+.rosa3 {
+    right: 17%;
+    transform: rotate(8deg);
+}
+
+/* Flor */
+.flor {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 220px;
+    height: 220px;
+    transform: translateX(-50%);
+}
+
+/* Pétalos */
+.petalo {
+    position: absolute;
+    width: 105px;
+    height: 135px;
+    background: radial-gradient(circle at 50% 30%, #fff59d, #ffd21c 60%, #e5a900);
+    border-radius: 50% 50% 45% 45%;
+    box-shadow:
+        inset 0 -8px 15px rgba(180,120,0,.25),
+        0 4px 10px rgba(120,80,0,.18);
+}
+
+/* Pétalos exteriores */
+.p1 {
+    left: 58px;
+    top: 0;
+    transform: rotate(0deg);
+}
+
+.p2 {
+    left: 105px;
+    top: 30px;
+    transform: rotate(55deg);
+}
+
+.p3 {
+    left: 100px;
+    top: 90px;
+    transform: rotate(105deg);
+}
+
+.p4 {
+    left: 55px;
+    top: 105px;
+    transform: rotate(180deg);
+}
+
+.p5 {
+    left: 5px;
+    top: 85px;
+    transform: rotate(245deg);
+}
+
+.p6 {
+    left: 0;
+    top: 30px;
+    transform: rotate(300deg);
+}
+
+/* Pétalos internos */
+.interno {
+    position: absolute;
+    width: 100px;
+    height: 105px;
+    background: linear-gradient(135deg, #ffe95c, #f5b900);
+    border-radius: 50%;
+    box-shadow: inset 0 5px 12px rgba(255,255,255,.4);
+}
+
+.i1 {
+    left: 62px;
+    top: 35px;
+    transform: rotate(25deg);
+}
+
+.i2 {
+    left: 85px;
+    top: 65px;
+    transform: rotate(100deg);
+}
+
+.i3 {
+    left: 42px;
+    top: 70px;
+    transform: rotate(150deg);
+}
+
+/* Centro de la rosa */
+.centro {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 78px;
+    top: 73px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle,
+        #fff176 0 10%,
+        #d99b00 11% 20%,
+        #ffd740 21% 35%,
+        #c88a00 36% 45%,
+        #ffc400 46%);
+    box-shadow: 0 4px 10px rgba(120,80,0,.3);
+}
+
+/* Tallo */
+.tallo {
+    position: absolute;
+    width: 18px;
+    height: 390px;
+    background: linear-gradient(to right, #0b681d, #27a52e, #075d17);
+    left: 50%;
+    top: 190px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+/* Hojas */
+.hoja {
+    position: absolute;
+    width: 120px;
+    height: 55px;
+    background: linear-gradient(135deg, #52bd45, #08751b);
+    border-radius: 100% 0 100% 0;
+    box-shadow: inset 0 3px 8px rgba(255,255,255,.2);
+}
+
+.hoja::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background: #0a5c14;
+    top: 27px;
+    left: 10px;
+    transform: rotate(-20deg);
+    border-radius: 50%;
+}
+
+.hoja1 {
+    left: 7px;
+    top: 310px;
+    transform: rotate(-25deg);
+}
+
+.hoja2 {
+    right: 7px;
+    top: 390px;
+    transform: scaleX(-1) rotate(-25deg);
+}
+
+.hoja3 {
+    left: 7px;
+    top: 470px;
+    transform: rotate(-15deg);
+}
+
+/* Pasto */
+
+
+
+/* Hierbas */
+.pasto::before {
+    content: "  🌷 TE AMOO CON TODO MI CORAZON MI BB 🌷";
+    position: absolute;
+    top: 620px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Corazones */
+.corazon {
+    position: absolute;
+    font-size: 60px;
+    animation: flotar 4s infinite ease-in-out,
+               latido 1.5s infinite ease-in-out;
+    z-index: 10;
+}
+
+.c1 {
+    left: 10%;
+    top: 40%;
+}
+
+.c2 {
+    right: 10%;
+    top: 55%;
+    animation-delay: 1s;
+}
+
+.c3 {
+    left: 65%;
+    top: 25%;
+    animation-delay: 1s;
+}
+.c4 {
+    left: 14%;
+    top: 70%;
+    animation-delay: 1s;
+}
+
+@keyframes flotar {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+/* Adaptación celular */
+@media(max-width: 700px) {
+
+    .mensaje {
+        font-size: 28px;
+    }
+
+    .rosa {
+        transform: scale(.65);
+    }
+
+    .rosa1 {
+        left: -5%;
+    }
+
+    .rosa2 {
+        left: 27%;
+    }
+
+    .rosa3 {
+        right: -5%;
+    }
+}
+.foto {
+    position: absolute;
+    width: 150px;
+    height: 180px;
+    padding: 8px;
+    background: white;
+    border: 3px solid #d6a900;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    z-index: 15;
+    transition: .3s;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Esquina superior izquierda */
+.foto1 {
+    left: 25px;
+    top: 25px;
+    transform: rotate(-8deg);
+   
+}
+
+/* Esquina superior derecha */
+.foto2 {
+    right: 25px;
+    top: 25px;
+    transform: rotate(8deg);
+}
+
+/* Esquina inferior izquierda */
+.foto3 {
+    left: 25px;
+    bottom: 35px;
+    transform: rotate(7deg);
+}
+
+/* Esquina inferior derecha */
+.foto4 {
+    right: 25px;
+    bottom: 35px;
+    transform: rotate(-7deg);
+}
+
+/* Efecto al pasar el mouse */
+.foto:hover {
+    transform: scale(1.08) rotate(0deg);
+    z-index: 30;
+}
+</style>
+</head>
+
+<body>
+
+<div class="jardin">
+
+    <!-- FOTOGRAFÍAS -->
+<div class="foto foto1">
+    <img src="amor1.jpg" alt="Foto 1">
+</div>
+
+<div class="foto foto2">
+    <img src="amor2.jpg" alt="Foto 2">
+</div>
+
+<div class="foto foto3">
+    <img src="amor3.jpeg" alt="Foto 3">
+</div>
+
+<div class="foto foto4">
+    <img src="amor5.jpeg" alt="Foto 4">
+</div>
+
+
+    <div class="mensaje">
+        💕FLORES PARA MI CACHETONA💕 
+    </div>
+
+    <div class="corazon c1">💛</div>
+    <div class="corazon c2">💛</div>
+    <div class="corazon c3">✨</div>
+    <div class="corazon c4">✨</div>
+
+    <!-- ROSA 1 -->
+    <div class="rosa rosa1">
+        <div class="flor">
+            <div class="petalo p1"></div>
+            <div class="petalo p2"></div>
+            <div class="petalo p3"></div>
+            <div class="petalo p4"></div>
+            <div class="petalo p5"></div>
+            <div class="petalo p6"></div>
+
+            <div class="interno i1"></div>
+            <div class="interno i2"></div>
+            <div class="interno i3"></div>
+
+            <div class="centro"></div>
+        </div>
+
+        <div class="tallo"></div>
+
+        <div class="hoja hoja1"></div>
+        <div class="hoja hoja2"></div>
+        <div class="hoja hoja3"></div>
+    </div>
+
+    <!-- ROSA 2 -->
+    <div class="rosa rosa2">
+        <div class="flor">
+            <div class="petalo p1"></div>
+            <div class="petalo p2"></div>
+            <div class="petalo p3"></div>
+            <div class="petalo p4"></div>
+            <div class="petalo p5"></div>
+            <div class="petalo p6"></div>
+
+            <div class="interno i1"></div>
+            <div class="interno i2"></div>
+            <div class="interno i3"></div>
+
+            <div class="centro"></div>
+        </div>
+
+        <div class="tallo"></div>
+
+        <div class="hoja hoja1"></div>
+        <div class="hoja hoja2"></div>
+        <div class="hoja hoja3"></div>
+    </div>
+
+    <!-- ROSA 3 -->
+    <div class="rosa rosa3">
+        <div class="flor">
+            <div class="petalo p1"></div>
+            <div class="petalo p2"></div>
+            <div class="petalo p3"></div>
+            <div class="petalo p4"></div>
+            <div class="petalo p5"></div>
+            <div class="petalo p6"></div>
+
+            <div class="interno i1"></div>
+            <div class="interno i2"></div>
+            <div class="interno i3"></div>
+
+            <div class="centro"></div>
+        </div>
+
+        <div class="tallo"></div>
+
+        <div class="hoja hoja1"></div>
+        <div class="hoja hoja2"></div>
+        <div class="hoja hoja3"></div>
+    </div>
+
+    <div class="pasto"></div>
+
+</div>
+
+</body>
+</html>
